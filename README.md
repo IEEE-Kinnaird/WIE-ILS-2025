@@ -23,6 +23,6 @@ ils-2025/
 └── README.md         # Project documentation
 ```
 
-##✨ Acknowledgments
+## ✨ Acknowledgments
 IEEE Lahore Section
 All contributors and participants of the IEEE WIE International Leadership Summit 2025
