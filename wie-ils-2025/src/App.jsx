@@ -1,10 +1,20 @@
 import React from 'react'
-import Home from './components/Home'
+import ILSSpeakers from './components/ILSSpeakers'
+import Sponsors from './components/Sponsers'
+import Teams from './components/Teams'
+import ContactUs from './components/ContactUs'
 
 function App() {
   return (
     <>
-    <Home/>
+    {/* Star Background */}
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>
+    <ILSSpeakers/>
+    <Sponsors/>
+    <Teams/>
+    <ContactUs/>
     </>
   )
 }
