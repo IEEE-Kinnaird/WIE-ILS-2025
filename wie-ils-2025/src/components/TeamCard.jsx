@@ -2,7 +2,7 @@ import React from 'react';
 
 const TeamCard = ({ name, title, img }) => {
   return (
-    <div className=" p-6 rounded-lg flex flex-col items-center  h-full w-full">
+    <div className=" p-4 rounded-lg flex flex-col items-center  h-full w-full -mx-2"> 
       <img
         src={img}
         alt={name}

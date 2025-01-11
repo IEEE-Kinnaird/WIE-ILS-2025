@@ -1,26 +1,56 @@
-// // src/components/SpeakerCard.jsx
-// const SpeakerCard = ({ speaker }) => {
+// import React from 'react';
+// import { FaEnvelope, FaLinkedin, FaInstagram } from 'react-icons/fa';
+
+// const SpeakerCard = ({ name, title, img }) => {
 //   return (
-//     <div className="w-full max-w-xs bg-[#2d2d44] rounded-2xl p-6 text-center text-white transition-transform hover:scale-105">
-//       <div className="w-[180px] h-[180px] mx-auto rounded-full mb-4 bg-gradient-to-b from-sky-300 to-green-300">
-//         <img 
-//           src={speaker.img} 
-//           alt={speaker.name} 
-//           className="w-full h-full rounded-full object-cover"
-//         />
+//     <div className="bg-[#2d2d44] p-6 rounded-lg flex flex-col items-center shadow-md transition-transform transform hover:scale-105 w-full max-w-sm mx-auto">
+//       <img
+//         src={img}
+//         alt={name}
+//         className="w-28 h-28 rounded-full mb-4 bg-gray-300 object-cover"
+//       />
+//       <h2 className="text-lg font-bold text-white text-center">{name}</h2>
+//       <p className="text-sm text-gray-300 text-center mb-4">{title}</p>
+//       <div className="flex justify-center space-x-4 mt-4">
+//         <a href="#" className="text-gray-400 hover:text-blue-500">
+//           <FaEnvelope className="w-5 h-5" />
+//         </a>
+//         <a href="#" className="text-gray-400 hover:text-blue-500">
+//           <FaLinkedin className="w-5 h-5" />
+//         </a>
+//         <a href="#" className="text-gray-400 hover:text-pink-500">
+//           <FaInstagram className="w-5 h-5" />
+//         </a>
 //       </div>
-//       <h3 className="text-xl font-semibold mb-2">{speaker.name}</h3>
-//       <p className="text-sm text-gray-400">{speaker.title}</p>
-//       <div className="flex justify-center gap-4 mt-4">
-//         <button className="hover:text-blue-400 transition-colors text-lg">
-//           <i className="fas fa-envelope"></i>
-//         </button>
-//         <button className="hover:text-blue-500 transition-colors text-lg">
-//           <i className="fab fa-linkedin"></i>
-//         </button>
-//         <button className="hover:text-blue-400 transition-colors text-lg">
-//           <i className="fab fa-twitter"></i>
-//         </button>
+//     </div>
+//   );
+// };
+
+// export default SpeakerCard;
+
+// import React from 'react';
+// import { FaEnvelope, FaLinkedin, FaInstagram } from 'react-icons/fa';
+
+// const SpeakerCard = ({ name, title, img }) => {
+//   return (
+//     <div className="bg-[#2d2d44] p-6 rounded-lg flex flex-col items-center shadow-md transition-transform transform hover:scale-105 w-full max-w-xs mx-auto">
+//       <img
+//         src={img}
+//         alt={name}
+//         className="w-28 h-28 rounded-full mb-4 bg-gray-300 object-cover"
+//       />
+//       <h2 className="text-lg font-bold text-white text-center">{name}</h2>
+//       <p className="text-sm text-gray-300 text-center mb-4">{title}</p>
+//       <div className="flex justify-center space-x-4 mt-4">
+//         <a href="#" className="text-gray-400 hover:text-blue-500">
+//           <FaEnvelope className="w-5 h-5" />
+//         </a>
+//         <a href="#" className="text-gray-400 hover:text-blue-500">
+//           <FaLinkedin className="w-5 h-5" />
+//         </a>
+//         <a href="#" className="text-gray-400 hover:text-pink-500">
+//           <FaInstagram className="w-5 h-5" />
+//         </a>
 //       </div>
 //     </div>
 //   );
@@ -29,26 +59,27 @@
 // export default SpeakerCard;
 
 import React from 'react';
+import { FaEnvelope, FaLinkedin, FaInstagram } from 'react-icons/fa';
 
 const SpeakerCard = ({ name, title, img }) => {
   return (
-    <div className="bg-[#2d2d44] p-6 rounded-lg flex flex-col items-center shadow-md transition-transform transform hover:scale-105 h-full w-full">
+    <div className="bg-[#4e2659] p-4 md:p-6 rounded-lg flex flex-col items-center shadow-md transition-transform transform hover:scale-105 w-full max-w-xs mx-auto">
       <img
         src={img}
         alt={name}
-        className="w-28 h-28 rounded-full mb-4 bg-gray-300 object-cover"
+        className="w-24 h-24 md:w-28 md:h-28 rounded-full mb-4 bg-gray-300 object-cover"
       />
-      <h2 className="text-lg font-bold text-white text-center">{name}</h2>
-      <p className="text-sm text-gray-300 text-center mb-4">{title}</p>
-      <div className="flex justify-center space-x-4 mt-4">
+      <h2 className="text-base md:text-lg font-bold text-white text-center">{name}</h2>
+      <p className="text-xs md:text-sm text-gray-300 text-center mb-3">{title}</p>
+      <div className="flex justify-center space-x-4 mt-1">
         <a href="#" className="text-gray-400 hover:text-blue-500">
-          <i className="fas fa-envelope"></i>
+          <FaEnvelope className="w-5 h-5" />
         </a>
         <a href="#" className="text-gray-400 hover:text-blue-500">
-          <i className="fab fa-linkedin"></i>
+          <FaLinkedin className="w-5 h-5" />
         </a>
         <a href="#" className="text-gray-400 hover:text-pink-500">
-          <i className="fab fa-instagram"></i>
+          <FaInstagram className="w-5 h-5" />
         </a>
       </div>
     </div>
@@ -56,4 +87,3 @@ const SpeakerCard = ({ name, title, img }) => {
 };
 
 export default SpeakerCard;
-
