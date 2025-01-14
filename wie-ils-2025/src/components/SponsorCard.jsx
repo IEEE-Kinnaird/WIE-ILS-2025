@@ -3,7 +3,7 @@ import React from 'react';
 
 const SponsorCard = ({ img }) => {
   return (
-    <div className="bg-transparent p-5 rounded-lg flex justify-center shadow-md transition-transform transform hover:scale-105">
+    <div className="backdrop-blur-sm p-5 rounded-lg flex justify-center shadow-md transition-transform transform hover:scale-105">
       <img
         src={img}
         alt="Sponsor Logo"
