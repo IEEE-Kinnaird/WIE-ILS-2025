@@ -11,7 +11,7 @@ function Home() {
       {/* <Navbar /> */}
       <div
         className="flex flex-col md:flex-row min-h-screen bg-cover bg-center relative mt-4 mx-4 md:mx-6 mb-6 rounded-3xl"
-        style={{ backgroundImage: `url(${background})` }}
+        
       >
         {/* Left Column for Content */}
         <div className="flex flex-col justify-center items-start text-white p-4 md:ml-10 w-full md:w-1/2">
@@ -21,13 +21,13 @@ function Home() {
            {/* Event Details */}
   <div className="p-6 rounded-lg mt-6 sm:mt-20 shadow-lg mb-6 text-center md:text-left">
     <div className="flex items-center mb-4 justify-start ">
-      <FaCalendarAlt className="mr-2 text-3xl md:text-6xl text-[#e065c5]" />
-      <p className="text-3xl md:text-5xl ml-3 font-bold mb-1">April 7-8, 2025</p>
+      <FaCalendarAlt className="mr-2 text-4xl md:text-6xl text-[#e065c5]" />
+      <p className="text-3xl md:text-5xl md:ml-3 font-bold mb-1">April 7-8, 2025</p>
     </div>
     <div className="flex items-center  justify-center">
-      <FaMapMarkerAlt className="mr-2 text-3xl md:text-6xl mt-1 text-[#e065c5]" />
+      <FaMapMarkerAlt className="mr-2 text-4xl md:text-6xl mt-1 text-[#e065c5]" />
       <div className='mt-2'>
-  <p className="font-semibold ml-3 text-3xl mt-4 md:text-5xl">Kinnaird College for Women</p>
+  <p className="font-semibold md:ml-3 text-3xl md:mt-4 md:text-5xl">Kinnaird College for Women</p>
   <p className='text-lg md:text-3xl ml-3 mt-3 md:ml-4'>93 Jail Rd, G.O.R.-I, Lahore, Punjab</p>
 </div>
     </div>

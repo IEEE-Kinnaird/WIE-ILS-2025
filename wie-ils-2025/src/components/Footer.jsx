@@ -2,7 +2,7 @@ import React from 'react';
 import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram } from 'react-icons/fa';
 const Footer = () => {
   return (
-    <footer className="bg-[#4e2659] text-white p-4 m-6 rounded-2xl">
+    <footer className="bg-[#28112E] text-white p-4 m-6 rounded-2xl">
       <div className="container mx-auto text-center">
        
 
@@ -22,7 +22,7 @@ const Footer = () => {
             <FaInstagram size={24} />
           </a>
         </div>
-        <p className='mb-2 text-xl'>Content © Copyright 2025 WIE-ILS</p>
+        <p className='mb-2 text-xl text-gray-500'>Content © Copyright 2025 WIE-ILS</p>
         {/* Contact Information */}
         {/* <div className="mb-4">
           <p className="text-sm">Email: <a href="mailto:info@wie-ils.org" className="text-white hover:text-[#e065c5]">info@wie-ils.org</a></p>

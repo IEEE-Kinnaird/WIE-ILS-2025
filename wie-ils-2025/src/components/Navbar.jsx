@@ -34,7 +34,7 @@ const Navbar = () => {
         </div>
       </div>
 
-      <header className="bg-[#4e2659] shadow-md mt-6 ml-6 mr-6 mb-6  rounded-3xl">
+      <header className="bg-[#28112E] shadow-md mt-6 ml-6 mr-6 mb-6  rounded-3xl">
         <div className={`container py-4 ${isMenuOpen ? 'pb-4' : 'pb-0'}`}>
           <nav className={`flex-col md:flex md:flex-row md:space-x-6 justify-around items-center w-full lg:ml-36 lg:h-12 lg:pb-4 text-2xl ${isMenuOpen ? 'flex' : 'hidden md:flex'}`}>
             <NavLink
