@@ -24,10 +24,10 @@ function Home() {
       <FaCalendarAlt className="mr-2 text-4xl md:text-6xl text-[#e065c5]" />
       <p className="text-3xl md:text-5xl md:ml-3 font-bold mb-1">April 7-8, 2025</p>
     </div>
-    <div className="flex items-center  justify-center">
+    <div className="flex items-center  justify-start">
       <FaMapMarkerAlt className="mr-2 text-4xl md:text-6xl mt-1 text-[#e065c5]" />
-      <div className='mt-2'>
-  <p className="font-semibold md:ml-3 text-3xl md:mt-4 md:text-5xl">Kinnaird College for Women</p>
+      <div className='mt-5'>
+  <p className="font-semibold md:ml-3 text-2xl md:mt-4 md:text-5xl ">Kinnaird College for Women</p>
   <p className='text-lg md:text-3xl ml-3 mt-3 md:ml-4'>93 Jail Rd, G.O.R.-I, Lahore, Punjab</p>
 </div>
     </div>

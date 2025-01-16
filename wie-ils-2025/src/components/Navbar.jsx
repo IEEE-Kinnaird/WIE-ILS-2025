@@ -88,7 +88,7 @@ const Navbar = () => {
               Registration
             </NavLink>
             <NavLink
-              to="/team"
+              to="/teams"
               className={({ isActive }) =>
                 isActive
                   ? "text-white font-semibold border-b-2 border-[#FFBA00]"
