@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import background from '../assets/bg.jpg'; // Example path
+// import background from '../assets/bg.jpg';
 
 const ContactUs = () => {
   const [formData, setFormData] = useState({
@@ -15,85 +15,99 @@ const ContactUs = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission logic here
     console.log('Form submitted:', formData);
-    // Reset form after submission
     setFormData({ name: '', email: '', message: '' });
   };
 
   return (
-    <div
-      className="text-white min-h-screen flex justify-center items-center px-4 mt-6 ml-6 mr-6 mb-6 rounded-3xl"
-      style={{
-        backgroundImage: `url(${background})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
-    >
-      <div className="backdrop-blur-sm p-8 md:p-16 border border-white rounded-3xl shadow-lg max-w-6xl w-full">
-        {/* Contact Us Content */}
-        <div className="flex flex-col md:flex-row gap-8">
-          {/* Contact Form Section */}
-          <div className="flex-1 flex flex-col justify-center gap-6">
-            <h1 className="text-4xl font-bold text-center md:text-left">Contact Us</h1>
-            <p className="text-lg text-center md:text-left">
-              Feel free to reach out to us! We're here to help and answer any questions you might have.
-            </p>
-            <form onSubmit={handleSubmit} className="flex flex-col gap-4">
-              <div>
-                <label className="font-bold text-lg">Name</label>
-                <input
-                  type="text"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  required
-                  className="w-full p-2 mt-1 rounded-lg border text-[#28112E] bg-white opacity-40 border-gray-300"
-                />
-              </div>
-              <div>
-                <label className="font-bold text-lg">Email</label>
-                <input
-                  type="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  required
-                  className="w-full p-2 mt-1 rounded-lg text-[#28112E] bg-white opacity-40 border border-gray-300"
-                />
-              </div>
-              <div>
-                <label className="font-bold text-lg">Message</label>
-                <textarea
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  required
-                  rows="4"
-                  className="w-full p-2 mt-1 bg-white opacity-40 text-[#28112E] rounded-lg border border-gray-300"
-                />
-              </div>
-              <button type="submit" className="bg-[#52295d]  w-64 mx-auto text-white p-4 rounded-lg hover:bg-[#4d2e54] transition duration-200">
-                Send Message
-              </button>
-            </form>
-          </div>
+    <div className="min-h-screen p-4 sm:p-6 md:p-8 bg-transparent  ">
+      <div 
+        className="max-w-7xl mx-auto rounded-3xl overflow-hidden"
 
-          {/* Map Section */}
-          <div className="flex-1">
-            <div className="w-full h-64 md:h-full rounded-lg overflow-hidden shadow-lg">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3400.496461796169!2d74.3405255!3d31.5379871!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391904ebcc18c7bf%3A0x1c311b2dddb7ab8f!2sKinnaird%20College%20For%20Women%20University!5e0!3m2!1sen!2s!4v1729690252453!5m2!1sen!2s"
-                title="Google Map"
-                style={{ border: 0, width: "100%", height: "100%" }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              />
+      >
+        <div className="backdrop-blur-sm border-white p-6 sm:p-8 md:p-12 lg:p-16">
+          <div className="flex flex-col lg:flex-row gap-8 lg:gap-16">
+            {/* Contact Form Section */}
+            <div className="flex-1 flex flex-col gap-6">
+              <div className="text-center lg:text-left">
+                <h1 className="text-3xl sm:text-4xl font-bold text-white mb-4">Contact Us</h1>
+                <p className="text-base sm:text-lg text-white/90">
+                  Feel free to reach out to us! We're here to help and answer any questions you might have.
+                </p>
+              </div>
+
+              <form onSubmit={handleSubmit} className="flex flex-col gap-6">
+                <div>
+                  <label htmlFor="name" className="block text-white font-semibold mb-2">Name</label>
+                  <input
+                    id="name"
+                    type="text"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    required
+                    className="w-full p-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-white/30 transition-all"
+                    placeholder="Enter your name"
+                  />
+                </div>
+
+                <div>
+                  <label htmlFor="email" className="block text-white font-semibold mb-2">Email</label>
+                  <input
+                    id="email"
+                    type="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    required
+                    className="w-full p-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-white/30 transition-all"
+                    placeholder="Enter your email"
+                  />
+                </div>
+
+                <div>
+                  <label htmlFor="message" className="block text-white font-semibold mb-2">Message</label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
+                    required
+                    rows="4"
+                    className="w-full p-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-white/30 transition-all resize-none"
+                    placeholder="Type your message here..."
+                  />
+                </div>
+
+                <button 
+                  type="submit" 
+                  className="w-full sm:w-auto px-8 py-3 bg-white/10 text-white font-semibold rounded-lg border border-white/20 hover:bg-white/20 focus:outline-none focus:ring-2 focus:ring-white/30 transition-all duration-200 self-center"
+                >
+                  Send Message
+                </button>
+              </form>
+            </div>
+
+            {/* Map Section */}
+            <div className="flex-1 h-[300px] lg:h-auto">
+              <div className="w-full h-full rounded-lg overflow-hidden shadow-lg border border-white/20">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3400.496461796169!2d74.3405255!3d31.5379871!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391904ebcc18c7bf%3A0x1c311b2dddb7ab8f!2sKinnaird%20College%20For%20Women%20University!5e0!3m2!1sen!2s!4v1729690252453!5m2!1sen!2s"
+                  title="Google Map"
+                  className="w-full h-full"
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                />
+              </div>
             </div>
           </div>
         </div>
       </div>
+
+      {/* Decorative Elements */}
+      <div className="fixed top-0 left-0 w-64 h-64 bg-purple-500/20 rounded-full filter blur-3xl -z-10"></div>
+      <div className="fixed bottom-0 right-0 w-96 h-96 bg-pink-500/20 rounded-full filter blur-3xl -z-10"></div>
     </div>
   );
 };

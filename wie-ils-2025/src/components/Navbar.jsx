@@ -29,9 +29,9 @@ const Navbar = () => {
           </svg>
         </button>
         <div className="flex items-center ml-4">
-          <img src={logo} alt="Logo" className="h-20 w-20" />
-          <img src={wie} alt="WIE Logo" className="h-20 w-48 ml-10" />
-        </div>
+  <img src={logo} alt="Logo" className="h-16 w-16 sm:h-20 sm:w-20" /> {/* Smaller size for mobile */}
+  <img src={wie} alt="WIE Logo" className="h-16 w-32 sm:h-20 sm:w-48 ml-2 sm:ml-10" /> {/* Adjusted size and margin */}
+</div>
       </div>
 
       <header className="bg-[#28112E] shadow-md mt-6 ml-6 mr-6 mb-6  rounded-3xl">

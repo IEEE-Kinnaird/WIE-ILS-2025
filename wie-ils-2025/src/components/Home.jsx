@@ -19,16 +19,17 @@ function Home() {
         <h1 className="text-2xl md:text-6xl  mb-6 font-bold md:whitespace-nowrap">International Leadership Summit 2025</h1>
           
            {/* Event Details */}
-  <div className="p-6 rounded-lg mt-6 sm:mt-20 shadow-lg mb-6 text-center md:text-left">
+  <div className="p-6 rounded-lg mt-6 sm:mt-20 shadow-lg mb-6 text-left">
     <div className="flex items-center mb-4 justify-start ">
-      <FaCalendarAlt className="mr-2 text-4xl md:text-6xl text-[#e065c5]" />
-      <p className="text-3xl md:text-5xl md:ml-3 font-bold mb-1">April 7-8, 2025</p>
+      <FaCalendarAlt className="mr-2 text-3xl md:text-6xl text-[#e065c5]" />
+      <p className="text-2xl md:text-5xl md:ml-3 font-bold mb-1">April 7-8, 2025</p>
     </div>
-    <div className="flex items-center  justify-start">
-      <FaMapMarkerAlt className="mr-2 text-4xl md:text-6xl mt-1 text-[#e065c5]" />
-      <div className='mt-5'>
-  <p className="font-semibold md:ml-3 text-2xl md:mt-4 md:text-5xl ">Kinnaird College for Women</p>
-  <p className='text-lg md:text-3xl ml-3 mt-3 md:ml-4'>93 Jail Rd, G.O.R.-I, Lahore, Punjab</p>
+    <div className="flex items-center mb-4 justify-start">
+      <FaMapMarkerAlt className="mr-2 text-4xl md:text-6xl mb-10 md:mb-0 text-[#e065c5]" />
+      <div className=''>
+  <p className="text-2xl md:text-5xl md:ml-3 font-bold mb-1 mt-8">Kinnaird College for Women</p>
+
+<p className='text-lg md:text-3xl ml-3 md:ml-4'>93 Jail Rd, G.O.R.-I, Lahore, Punjab</p>
 </div>
     </div>
    
