@@ -9,7 +9,7 @@ const Teams = () => {
     
       >
         <h1 className="text-4xl font-bold text-center mb-12 tracking-wide">Meet Our Team</h1>
-        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-0 grid-auto-flow-dense">
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-16 grid-auto-flow-dense">
           {teamData.map((team, index) => (
             <TeamCard 
             key={index} team={team} 

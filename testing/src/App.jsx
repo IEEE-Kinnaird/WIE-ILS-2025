@@ -10,11 +10,8 @@ import ContactUs from './components/ContactUs'
 
 function App() {
   return (
-
     <>
-    
 
-  
      <Router>
       <Routes>
         <Route path="/" element={<Layout />}>

@@ -1,8 +1,7 @@
-
 import React from 'react';
 import { FaEnvelope, FaLinkedin, FaInstagram } from 'react-icons/fa';
 
-const SpeakerCard = ({ name, title, img }) => {
+const PannelistCard = ({ name, title, img }) => {
   return (
     <div className="backdrop-blur-sm p-4 md:p-6 rounded-lg flex flex-col items-center shadow-md transition-transform transform hover:scale-105 w-full max-w-[240px] mx-auto">
       {/* Responsive size for the circle */}
@@ -30,4 +29,4 @@ const SpeakerCard = ({ name, title, img }) => {
   );
 };
 
-export default SpeakerCard;
+export default PannelistCard;

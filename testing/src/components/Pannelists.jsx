@@ -24,4 +24,3 @@ const Pannelists = () => {
   );
 };
 export default Pannelists;
-
