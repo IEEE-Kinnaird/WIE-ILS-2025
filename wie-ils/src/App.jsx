@@ -13,7 +13,7 @@ function App() {
   return (
     <>
 
-     <Router basename="/WIE">
+     <Router basename="/WIE-ILS-2025">
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
