@@ -1,0 +1,12 @@
+{
+    "build": {
+      "env": {
+        "NODE_ENV": "production"
+      },
+      "src": "src", 
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "dist" 
+      }
+    }
+  }

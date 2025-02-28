@@ -14,4 +14,3 @@ const SponsorCard = ({ img }) => {
 };
 
 export default SponsorCard;
-
