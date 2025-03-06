@@ -13,7 +13,8 @@ function App() {
   return (
     <>
 
-     <Router basename="/WIE-ILS-2025">
+     {/* <Router basename="/WIE-ILS-2025"> */}
+     <Router basename="/">
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
