@@ -59,8 +59,8 @@ const Navbar = () => {
               { to: "/comingsoon", label: "Speakers" },
               { to: "/comingsoon", label: "Sponsors" },
               { to: "/comingsoon", label: "Registration" },
-              { to: "/comingsoon", label: "Team" },
-              { to: "/comingsoon", label: "Contact Us" },
+              { to: "/teams", label: "Team" },
+              { to: "/contact", label: "Contact Us" },
             ].map((link, index) => (
               <NavLink
                 key={index}
