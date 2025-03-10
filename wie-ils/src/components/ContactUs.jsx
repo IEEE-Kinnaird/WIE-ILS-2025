@@ -1,22 +1,41 @@
 import React, { useState } from 'react';
 // import background from '../assets/bg.jpg';
-
+import { Navigate, useNavigate } from 'react-router-dom';
 const ContactUs = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     message: '',
   });
-
+  const navigate =useNavigate();
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    setFormData({ name: '', email: '', message: '' });
+  
+    try {
+      const response = await fetch('https://getform.io/f/apjnxzma', {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+      
+      if (response.ok) {
+        console.log('Form submitted successfully');
+           navigate('/response');
+        setFormData({ name: '', email: '', message: '' });
+      } else {
+        console.error('Form submission failed:', response.statusText);
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+    }
   };
 
   return (
@@ -36,7 +55,7 @@ const ContactUs = () => {
                 </p>
               </div>
 
-              <form onSubmit={handleSubmit} className="flex flex-col gap-6">
+              <form onSubmit={handleSubmit}  method='POST' className="flex flex-col gap-6">
                 <div>
                   <label htmlFor="name" className="block text-white font-semibold mb-2">Name</label>
                   <input

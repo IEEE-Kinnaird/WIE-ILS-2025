@@ -2,7 +2,7 @@ import React from 'react';
 
 const TeamCard = ({ name, title, img }) => {
   return (
-    <div className=" p-4 rounded-lg flex flex-col items-center  h-full w-full -mx-2"> 
+    <div className=" p-4 rounded-lg flex flex-col items-center  h-full w-full mx-2"> 
 
       {/* <img
         src={img}
@@ -11,7 +11,7 @@ const TeamCard = ({ name, title, img }) => {
       /> */}
 
       {/* <div className="w-28 h-28 sm:w-32 sm:h-32 md:w-36 md:h-36 rounded-full overflow-hidden mb-4 bg-gray-300"> */}
-      <div className="w-36 h-36 sm:w-40 sm:h-40 md:w-44 md:h-44 rounded-full overflow-hidden mb-4 bg-gray-300">
+      <div className="w-40 h-40 sm:w-40 sm:h-40 md:w-44 md:h-44 rounded-full overflow-hidden mb-4 bg-gray-300">
         <img
           src={img}
           alt={name}

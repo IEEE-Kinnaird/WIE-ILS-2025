@@ -8,6 +8,8 @@ import Sponsors from './components/Sponsors';
 import Teams from './components/Teams';
 import ContactUs from './components/ContactUs'
 import Comingsoon from './components/comingsoon';
+import Registration from './components/Registration';
+import Cresponse from './components/Cresponse';
 
 function App() {
   return (
@@ -23,7 +25,9 @@ function App() {
     <Route path="/sponsors" element={<Sponsors/>} />
     <Route path="/teams" element={<Teams/>} />
     <Route path="/contact" element={<ContactUs/>} />
+    <Route path="/registration" element={<Registration/>} />
     <Route path="/comingsoon" element={<Comingsoon/>} />
+    <Route path="/response" element={<Cresponse/>} />
           {/* Add other routes here if needed */}
         </Route>
         {/* Optionally, add a NotFound route here */}

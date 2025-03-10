@@ -6,7 +6,7 @@ import background from '../assets/bg.jpg'; // Adjust the path to your background
 
 function Layout() {
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen bg-[#FFFF]">
       <Navbar />
       <main className="flex-grow">
         <div

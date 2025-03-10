@@ -1,7 +1,7 @@
 
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
-import logo from "../assets/logoo.png";
+import logo from "../assets/wie.png";
 import wie from "../assets/wier.png";
 
 const Navbar = () => {
@@ -55,10 +55,10 @@ const Navbar = () => {
           <nav className="flex flex-col md:flex-row md:space-x-6 justify-around items-center w-full text-lg md:text-xl text-center">
             {[
               { to: "/", label: "Home" },
-              { to: "/comingsoon", label: "Programs" },
+              { to: "/programs", label: "Programs" },
               { to: "/comingsoon", label: "Speakers" },
-              { to: "/comingsoon", label: "Sponsors" },
-              { to: "/comingsoon", label: "Registration" },
+              // { to: "/comingsoon", label: "Sponsors" },
+              { to: "/registration", label: "Registration" },
               { to: "/teams", label: "Team" },
               { to: "/contact", label: "Contact Us" },
             ].map((link, index) => (
