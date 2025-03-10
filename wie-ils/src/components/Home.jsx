@@ -52,8 +52,8 @@ function Home() {
         <div className="hidden md:flex md:flex-row min-h-screen bg-cover bg-center">
           {/* Left Column for Content */}
           <div className="flex flex-col justify-center items-start text-white p-4 md:ml-10 w-full md:w-1/2">
-            <h1 className="text-2xl md:text-6xl font-bold mb-4 md:whitespace-nowrap">Welcome to IEEE Women in Engineering</h1>
-            <h1 className="text-2xl md:text-6xl mb-6 font-bold md:whitespace-nowrap">International Leadership Summit 2025</h1>
+            <h1 className="text-2xl md:text-5xl font-bold mb-4 md:whitespace-nowrap">Welcome to IEEE Women in Engineering</h1>
+            <h1 className="text-2xl md:text-5xl mb-6 font-bold md:whitespace-nowrap">International Leadership Summit 2025</h1>
             
             {/* Event Details - Keeping Original */}
             <div className="p-6 rounded-lg mt-6 sm:mt-20 shadow-lg mb-6 text-left">
