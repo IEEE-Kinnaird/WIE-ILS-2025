@@ -12,10 +12,13 @@ const Teams = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-16 grid-auto-flow-dense">
           {teamData.map((team, index) => (
             <TeamCard 
-            key={index} team={team} 
+            key={index} 
             name={team.name}
             title={team.title}
-            img={team.img}/>
+            img={team.img}
+            linkedin={team.linkedin}
+            email={team.email}
+            />
             ))}
         </div>
       </div>
