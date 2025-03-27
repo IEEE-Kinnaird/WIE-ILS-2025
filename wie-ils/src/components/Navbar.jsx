@@ -57,6 +57,7 @@ const Navbar = () => {
               { to: "/", label: "Home" },
               { to: "/programs", label: "Programs" },
               { to: "/comingsoon", label: "Speakers" },
+              // { to: "/speakers", label: "Speakers" },
               // { to: "/comingsoon", label: "Sponsors" },
               { to: "/registration", label: "Registration" },
               { to: "/teams", label: "Team" },
