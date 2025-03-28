@@ -3,8 +3,12 @@ import React from 'react';
 const DAY1_SCHEDULE = [
   {
     time: "9:00 – 9:50 AM",
-    event: "Opening Ceremony ",
-    room: "New Auditorium"
+    event: "Participants Check-In & Setting",
+    room: "-"
+  },
+  {
+    type: "header",
+    event: "Opening Ceremony (New Auditorium)"
   },
   {
     time: "10:00 – 10:15 AM",
@@ -18,42 +22,46 @@ const DAY1_SCHEDULE = [
   },
   {
     time: "10:25 – 10:50 AM",
-    event: "Keynote Talk",
+    event: "Speaker 1 : Usman Asif",
     room: "New Auditorium"
   },
   {
-    time: "10:50 - 11: 00 AM",
-    event: "Guest of Honor Speech",
+    time: "11:05 – 11:15 AM",
+    event: "Guest of Honor : Engr.Muhammad Usman Asif",
     room: "New Auditorium"
   },
   {
-    time: "11:05 – 11:20 AM",
-    event: "Networking Session",
-    room: "New Auditorium"
-  },
-  {
-    time: "11:20 AM – 12:00 PM",
-    event: "Refreshments for Guests",
-    room: "New Auditorium"
-  },
-  {
-    time: "11:20 AM – 12:00 PM",
-    event: "WIE Kinnaird Inaguration",
+    time: "11:15 AM – 11:25 PM",
+    event: "Student Q&A",
     room: "New Auditorium"
   },
   {
     time: "11:30 AM – 12:00 PM",
-    event: "Break",
+    event: "Refreshments for Guests",
+    room: "New Auditorium"
+  },
+  {
+    time: "11:30 AM – 12:00 PM",
+    event: "Networking and Break",
     room: "-"
   },
   {
-    time: "12:30 - 3:30 PM",
-    event: "Workshop",
+    time: "12:00 - 12:15 PM",
+    event: "Breifing for Workshop",
+    room: "Amaltas Lab"
+  },
+  {
+    time: "1:30 - 3:30 PM",
+    event: "Data Science Workshop",
     room: "Amaltas Lab"
   }
 ];
 
 const DAY2_SCHEDULE = [
+  {
+    type: "header",
+    event: "Leadership Talks"
+  },
   {
     time: "9:00 – 9:45 AM",
     event: "Participants Check-in ",
@@ -66,36 +74,36 @@ const DAY2_SCHEDULE = [
   },
   {
     time: "10:20 – 10:40 AM",
-    event: "Leadership Talk 2",
+    event: "Leadership Talk 1: Annum Sadiq",
     room: "New Auditorium"
   },
   {
-    time: "10:45 – 11:05 AM",
-    event: "Leadership Talk 1",
+    time: "10:40 – 11:00 AM",
+    event: "Leadership Talk 2: Ahmad Manzoor",
     room: "New Auditorium"
   },
   {
-    time: "11:10 – 11:55 AM",
-    event: "Panel Talk",
+    time: "11:05 – 11:50 AM",
+    event: "Panel Talk : Yaser Awan, Anoosh Shaigan, Fahalat Imran",
     room: "New Auditorium"
   },
   {
-    time: "12:00 – 12:20 PM",
+    time: "11:55 – 12:05 PM",
     event: "Guest Token Distribution",
     room: "New Auditorium"
   },
   {
-    time: "12:20 – 12:30 PM",
+    time: "12:10 – 12:20 PM",
     event: "Ending Note",
     room: "New Auditorium"
   },
   {
-    time: "12:30 – 1:00 PM",
+    time: "12:20 – 12:45 PM",
     event: "Refreshments for guests",
     room: "New Auditorium"
   },
   {
-    time: "1:00 – 2:00 PM",
+    time: "12:30 – 1:15 PM",
     event: "Break",
     room: "-"
   },
@@ -104,42 +112,42 @@ const DAY2_SCHEDULE = [
     event: "Closing Ceremony (New Auditorium)"
   },
   {
-    time: "2:30 – 2:45 PM",
+    time: "1:15 – 1:30 PM",
     event: "Welcome, Recitation and Anthems",
     room: "New Auditorium"
   },
   {
-    time: "2:45 – 2:50 PM",
-    event: "HOD Address",
+    time: "1:30 – 1:40 PM",
+    event: "Principle's Note : Prof. Dr. Iram Anjum",
     room: "New Auditorium"
   },
   {
-    time: "2:50 – 3:20 PM",
-    event: "Keynote Talk",
+    time: "1:40 – 2:00 PM",
+    event: "Keynote Talk : Mr. Umair Javed",
     room: "New Auditorium"
   },
   {
-    time: "3:20 – 3:25 PM",
-    event: "Guest of Honor Speech",
+    time: "2:00 – 2:10 PM",
+    event: "Chief Guest Speech : Dr. Shehla Javed",
     room: "New Auditorium"
   },
   {
-    time: "3:25 – 4:00 PM",
+    time: "2:10 – 2:30 PM",
     event: "Prize Distribution Ceremony",
     room: "New Auditorium"
   },
   {
-    time: "4:05 – 4:15 PM",
+    time: "2:30 – 2:40 PM",
     event: "Ending Note",
     room: "New Auditorium"
   },
   {
-    time: "4:15 – 4:25 PM",
+    time: "2:40 – 2:50 PM",
     event: "Group Pictures and Networking Session",
     room: "New Auditorium"
   },
   {
-    time: "4:30 – 5:00 PM",
+    time: "2:50 – 3:20 PM",
     event: "Refreshments for Guests",
     room: "New Auditorium"
   }
@@ -177,7 +185,7 @@ function ProgramTable({ title, schedule }) {
             
             return (
               <React.Fragment key={index}>
-                <div className="p-4 text-white border-b border-white/20 text-center hover:bg-white/10 transition-colors">
+                <div className="p-4 text-white border-b  border-white/20 text-center hover:bg-white/10 transition-colors">
                   {adjustedIndex + 1}
                 </div>
                 <div className="p-4 text-white border-b border-white/20 text-center hover:bg-white/10 transition-colors">

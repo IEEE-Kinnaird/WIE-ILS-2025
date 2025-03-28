@@ -1,33 +1,36 @@
-
 import React from 'react';
-import { FaEnvelope, FaLinkedin, FaInstagram } from 'react-icons/fa';
+import { FaLinkedin } from 'react-icons/fa';
 
-const SpeakerCard = ({ name, title, img }) => {
+const SpeakerCard = ({ name, title, role, img, linkedin }) => {
   return (
-    <div className="backdrop-blur-sm p-4 md:p-6 rounded-lg flex flex-col items-center shadow-md transition-transform transform hover:scale-105 w-full max-w-[240px] mx-auto">
-      {/* Responsive size for the circle */}
-      <div className="w-28 h-28 sm:w-32 sm:h-32 md:w-36 md:h-36 rounded-full overflow-hidden mb-4 bg-gray-300">
-        <img
-          src={img}
-          alt={name}
-          className="w-full h-full object-cover"
-        />
+    <div className="bg-white/10 backdrop-blur-sm rounded-xl shadow-lg p-6 text-center relative w-full sm:w-1/2 md:w-80 mx-2 my-4 border border-white/20 transition-all duration-300 hover:scale-105 hover:shadow-xl">
+      <div className="absolute top-4 right-4">
+        {linkedin && (
+          <a 
+            href={linkedin} 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="text-blue-400 hover:text-blue-300 transition-colors"
+          >
+            <FaLinkedin
+              size={24} 
+              className="hover:scale-110 transition-transform"
+            />
+          </a>
+        )}
       </div>
-      <h2 className="text-base md:text-lg font-bold text-white text-center">{name}</h2>
-      <p className="text-xs md:text-sm text-gray-300 text-center mb-3">{title}</p>
-      <div className="flex justify-center space-x-4 mt-1">
-        <a href="#" className="text-gray-400 hover:text-blue-500">
-          <FaEnvelope className="w-5 h-5" />
-        </a>
-        <a href="#" className="text-gray-400 hover:text-blue-500">
-          <FaLinkedin className="w-5 h-5" />
-        </a>
-        <a href="#" className="text-gray-400 hover:text-pink-500">
-          <FaInstagram className="w-5 h-5" />
-        </a>
-      </div>
+      <img 
+        src={img} 
+        alt={name} 
+        className="w-32 h-32 rounded-full mx-auto object-cover border-4 border-white/30 mb-4" 
+      />
+      <h3 className="text-xl font-semibold text-white mb-2">{name}</h3>
+      <p className="text-gray-300 text-sm mb-1">{title}</p>
+      {role && (
+        <p className="text-gray-400 text-xs italic">({role})</p>
+      )}
     </div>
   );
-};
+}; 
 
 export default SpeakerCard;

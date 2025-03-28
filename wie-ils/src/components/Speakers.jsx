@@ -7,7 +7,7 @@ function Speakers() {
   return (
     <>
      <div
-      className="mt-6 ml-6 mr-6 mb-6 rounded-3xl text-white"
+      className="mt-6 ml-6 mr-6 mb-6  rounded-3xl text-white"
       style={{
         backgroundImage: `url(${background})`,
         backgroundSize: 'cover',
@@ -15,7 +15,7 @@ function Speakers() {
       }}
     >
       <ILSSpeakers/>
-      <Pannelists/>
+      {/* <Pannelists/> */}
       {/* <Footer /> */}
       </div>
     </>

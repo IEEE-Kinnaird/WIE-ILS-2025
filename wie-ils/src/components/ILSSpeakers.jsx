@@ -1,46 +1,38 @@
-// src/pages/ILSSpeakers.jsx
-import SpeakerCard from '../components/SpeakerCard';
-import speakersData from '../data/SpeakerData';
-import background from '../assets/bg.jpg'; // Example path
 import React from 'react';
-
-// const ILSSpeakers = () => {
-//   return (
-//     <div className="min-h-screen bg-[#1a1a2e] py-12 px-6">
-//       <div className="max-w-[1200px] mx-auto">
-//         <h1 className="text-4xl font-bold text-center text-white mb-12">
-//           ILS SPEAKERS
-//         </h1>
-//         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-//           {speakersData.map((speaker) => (
-//             <SpeakerCard key={speaker.id} speaker={speaker} />
-//           ))}
-//         </div>
-//       </div>
-//     </div>s
-//   );
-// };
-
-// export default ILSSpeakers;
+import SpeakerCard from './SpeakerCard';
+import speakersData from '../data/SpeakerData';
 
 const ILSSpeakers = () => {
   return (
-    
-    <div className=" text-white py-10 px-5"
+    <div className="container mx-auto px-4 py-16">
+      <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
+        Speakers
+      </h2>
 
-    >
-      <h1 className="text-4xl font-bold text-center mb-12 tracking-wide">ILS SPEAKERS</h1>
-      <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-8 place-items-center">
-        {speakersData.map((speaker, index) => (
-          <SpeakerCard
-            key={index}
-            name={speaker.name}
-            title={speaker.title}
-            img={speaker.img}
-          />
-        ))}
+      <div className="flex flex-wrap justify-center">
+        {[
+          { title: "Opening Ceremony", speakers: speakersData.openingCeremony },
+          { title: "Moderator", speakers: speakersData.moderators },
+          { title: "Leadership Talks", speakers: speakersData.leadershipTalks },
+          { title: "Panel Talk: Navigating through Cultural Bias in the Workplace", speakers: speakersData.panelTalk },
+          { title: "Data Science Workshop", speakers: speakersData.datascienceWorkshop },
+          { title: "Closing Ceremony", speakers: speakersData.closingCeremony }
+        ].flatMap(section =>
+          section.speakers.map(speaker => (
+            <div className="w-full sm:w-1/2 md:w-1/4 p-2" key={speaker.id}>
+              <SpeakerCard
+                name={speaker.name}
+                title={speaker.title}
+                role={section.title} // Pass the role to SpeakerCard
+                linkedin={speaker.linkedin} // Pass LinkedIn URL
+                img={speaker.img}
+              />
+            </div>
+          ))
+        )}
       </div>
     </div>
   );
 };
+
 export default ILSSpeakers;
